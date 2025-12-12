@@ -1,6 +1,6 @@
-# Score VPC Demo
+# public node 
 
-Infrastructure-as-code example satisfying the “Score” requirements. It builds a
+Infrastructure-as-code example satisfying the public node requirements. It builds a
 minimal AWS environment with:
 
 - one VPC containing a public and a private subnet
@@ -27,7 +27,7 @@ standard Terraform commands.
 ```bash
 cd terraform
 terraform init
-terraform apply -var='project_name=score-demo' \
+terraform apply -var='project_name=publicnode' \
                 -var='region=us-east-1' \
                 -var='allowed_ip_cidr=203.0.113.10/32' \
                 -var='key_name=your-keypair-name'
@@ -40,7 +40,7 @@ outputs include the public host public IP and the private host private IP.
 
 ```bash
 cd terraform
-terraform destroy -var='project_name=score-demo' \
+terraform destroy -var='project_name=publicnode' \
                   -var='region=us-east-1' \
                   -var='allowed_ip_cidr=203.0.113.10/32' \
                   -var='key_name=your-keypair-name'
